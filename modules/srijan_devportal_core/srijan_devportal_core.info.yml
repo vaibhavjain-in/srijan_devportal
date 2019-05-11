@@ -1,0 +1,10 @@
+name: 'Srijan Devportal Core'
+description: 'Shared functionality for the Srijan devportal core.'
+type: module
+package: Devportal
+version: '8.x-1.0'
+core: '8.x'
+
+# Required modules
+dependencies:
+- paragraphs

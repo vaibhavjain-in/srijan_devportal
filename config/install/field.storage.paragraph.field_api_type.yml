@@ -1,0 +1,65 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_api_type
+field_name: field_api_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: get
+      label: GET
+    -
+      value: post
+      label: POST
+    -
+      value: put
+      label: PUT
+    -
+      value: patch
+      label: PATCH
+    -
+      value: delete
+      label: DELETE
+    -
+      value: copy
+      label: COPY
+    -
+      value: head
+      label: HEAD
+    -
+      value: options
+      label: OPTIONS
+    -
+      value: link
+      label: LINK
+    -
+      value: unlink
+      label: UNLINK
+    -
+      value: purge
+      label: PURGE
+    -
+      value: lock
+      label: LOCK
+    -
+      value: unlock
+      label: UNLOCK
+    -
+      value: view
+      label: VIEW
+    -
+      value: propfind
+      label: PROPFIND
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

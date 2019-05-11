@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.product_api_success_response
+  module:
+    - text
+id: paragraph.product_api_success_response.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: product_api_success_response
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

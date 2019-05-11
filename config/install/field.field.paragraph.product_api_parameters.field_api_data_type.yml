@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_api_data_type
+    - paragraphs.paragraphs_type.product_api_parameters
+id: paragraph.product_api_parameters.field_api_data_type
+field_name: field_api_data_type
+entity_type: paragraph
+bundle: product_api_parameters
+label: 'API Data Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

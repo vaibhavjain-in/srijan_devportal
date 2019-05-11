@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - user
+id: node.product.table_of_content
+targetEntityType: node
+bundle: product
+mode: table_of_content
+content:
+  field_product_documentation:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: table_of_content
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_product_overview:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: table_of_content
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  field_featured_image: true
+  links: true

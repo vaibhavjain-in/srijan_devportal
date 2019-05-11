@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.table_of_content
+    - field.field.paragraph.product_details_sub_topics.field_description
+    - field.field.paragraph.product_details_sub_topics.field_title
+    - paragraphs.paragraphs_type.product_details_sub_topics
+id: paragraph.product_details_sub_topics.table_of_content
+targetEntityType: paragraph
+bundle: product_details_sub_topics
+mode: table_of_content
+content:
+  field_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  field_description: true

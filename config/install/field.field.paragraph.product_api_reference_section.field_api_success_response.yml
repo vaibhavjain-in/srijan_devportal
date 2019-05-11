@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_api_success_response
+    - paragraphs.paragraphs_type.product_api_reference_section
+    - paragraphs.paragraphs_type.product_api_success_response
+  module:
+    - entity_reference_revisions
+id: paragraph.product_api_reference_section.field_api_success_response
+field_name: field_api_success_response
+entity_type: paragraph
+bundle: product_api_reference_section
+label: 'API Success Response'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      product_api_success_response: product_api_success_response
+    target_bundles_drag_drop:
+      product_api_success_response:
+        enabled: true
+        weight: 8
+      product_api_parameters:
+        weight: 9
+        enabled: false
+      product_api_reference_section:
+        weight: 10
+        enabled: false
+      product_documentation_main_:
+        weight: 11
+        enabled: false
+      product_documentation_sub_topics:
+        weight: 12
+        enabled: false
+      product_overview_main:
+        weight: 13
+        enabled: false
+      product_overview_sub_topics:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

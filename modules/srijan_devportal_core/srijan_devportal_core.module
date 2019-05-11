@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations for the srijan_devportal_core module.
+ */
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_entity_view().
+ */
+function srijan_devportal_core_entity_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  // Add an id attribute to each paragraph's default view mode so that you can
+  // link to it from the table of contents.
+  if ($entity->getEntityTypeId() === 'paragraph') {
+    $paragraph_title = $entity->field_title->first()->value;
+    // Convert paragraph title to its respective machine name.
+    $machine_name = preg_replace('@[^a-z0-9-]+@', '-', mb_strtolower($paragraph_title));
+
+    // Add links in content table.
+    if ($view_mode === 'table_of_content') {
+      $link = Link::fromTextAndUrl($paragraph_title, Url::fromUserInput('#' . ($machine_name . '-' . $entity->id())));
+      $build['field_title'] = $link->toRenderable();
+    }
+    elseif ($view_mode === 'default') {
+      // Set Id on parent div when view mode is default.
+      $build['#attributes']['id'] = $machine_name . '-' . $entity->id();
+    }
+  }
+}

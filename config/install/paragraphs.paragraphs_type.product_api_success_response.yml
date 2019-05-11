@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: product_api_success_response
+label: 'Product API Success Response'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

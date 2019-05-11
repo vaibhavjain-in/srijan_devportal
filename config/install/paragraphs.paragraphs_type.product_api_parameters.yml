@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: product_api_parameters
+label: 'Product API parameters'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

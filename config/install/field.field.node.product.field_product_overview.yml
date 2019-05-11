@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_overview
+    - node.type.product
+    - paragraphs.paragraphs_type.product_details_main
+  module:
+    - entity_reference_revisions
+id: node.product.field_product_overview
+field_name: field_product_overview
+entity_type: node
+bundle: product
+label: 'Product Overview'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      product_details_main: product_details_main
+    target_bundles_drag_drop:
+      product_api_parameters:
+        weight: 6
+        enabled: false
+      product_api_reference_section:
+        weight: 7
+        enabled: false
+      product_details_sub_topics:
+        weight: 8
+        enabled: false
+      product_api_success_response:
+        weight: 8
+        enabled: false
+      product_overview_document_main:
+        weight: 9
+        enabled: false
+      product_overview_doc_sub_topics:
+        weight: 10
+        enabled: false
+      product_details_main:
+        enabled: true
+        weight: 12
+field_type: entity_reference_revisions

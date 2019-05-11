@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_documentation
+    - node.type.product
+    - paragraphs.paragraphs_type.product_api_reference_section
+    - paragraphs.paragraphs_type.product_details_main
+  module:
+    - entity_reference_revisions
+id: node.product.field_product_documentation
+field_name: field_product_documentation
+entity_type: node
+bundle: product
+label: 'Product Documentation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      product_details_main: product_details_main
+      product_api_reference_section: product_api_reference_section
+    target_bundles_drag_drop:
+      product_details_sub_topics:
+        weight: -15
+        enabled: false
+      product_api_success_response:
+        weight: -14
+        enabled: false
+      product_api_parameters:
+        weight: -13
+        enabled: false
+      product_overview_document_main:
+        weight: -12
+        enabled: false
+      product_details_main:
+        enabled: true
+        weight: -11
+      product_api_reference_section:
+        enabled: true
+        weight: -10
+      product_overview_doc_sub_topics:
+        weight: -9
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_product_details_sub_topics
+    - paragraphs.paragraphs_type.product_details_main
+    - paragraphs.paragraphs_type.product_details_sub_topics
+  module:
+    - entity_reference_revisions
+id: paragraph.product_details_main.field_product_details_sub_topics
+field_name: field_product_details_sub_topics
+entity_type: paragraph
+bundle: product_details_main
+label: 'Product Details (Sub Topics)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      product_details_sub_topics: product_details_sub_topics
+    target_bundles_drag_drop:
+      product_details_sub_topics:
+        enabled: true
+        weight: 8
+      product_api_parameters:
+        weight: 9
+        enabled: false
+      product_api_reference_section:
+        weight: 10
+        enabled: false
+      product_api_success_response:
+        weight: 11
+        enabled: false
+      product_details_main:
+        weight: 12
+        enabled: false
+      product_overview_doc_sub_topics:
+        weight: 13
+        enabled: false
+      product_overview_document_main:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

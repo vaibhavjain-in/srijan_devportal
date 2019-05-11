@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.table_of_content
+label: 'Table of Content'
+targetEntityType: node
+cache: true

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_http_status_code
+    - paragraphs.paragraphs_type.product_api_success_response
+id: paragraph.product_api_success_response.field_http_status_code
+field_name: field_http_status_code
+entity_type: paragraph
+bundle: product_api_success_response
+label: 'HTTP Status Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

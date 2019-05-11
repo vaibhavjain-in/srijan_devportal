@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_api_response_parameters
+    - paragraphs.paragraphs_type.product_api_parameters
+    - paragraphs.paragraphs_type.product_api_reference_section
+  module:
+    - entity_reference_revisions
+id: paragraph.product_api_reference_section.field_api_response_parameters
+field_name: field_api_response_parameters
+entity_type: paragraph
+bundle: product_api_reference_section
+label: 'API Response Parameters'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      product_api_parameters: product_api_parameters
+    target_bundles_drag_drop:
+      product_api_success_response:
+        weight: 8
+        enabled: false
+      product_api_parameters:
+        enabled: true
+        weight: 9
+      product_api_reference_section:
+        weight: 10
+        enabled: false
+      product_documentation_main_:
+        weight: 11
+        enabled: false
+      product_documentation_sub_topics:
+        weight: 12
+        enabled: false
+      product_overview_main:
+        weight: 13
+        enabled: false
+      product_overview_sub_topics:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

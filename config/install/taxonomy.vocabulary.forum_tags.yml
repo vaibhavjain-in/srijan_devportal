@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Forum Tags'
+vid: forum_tags
+description: ''
+hierarchy: 0
+weight: 0

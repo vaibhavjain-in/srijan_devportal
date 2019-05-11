@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+id: paragraph.product_api_success_response.default
+targetEntityType: paragraph
+bundle: product_api_success_response
+mode: default
+content:
+  field_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_http_status_code:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

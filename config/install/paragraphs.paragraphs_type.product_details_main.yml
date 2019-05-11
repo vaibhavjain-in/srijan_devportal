@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: product_details_main
+label: 'Product Details (Main)'
+icon_uuid: null
+description: 'This paragraph can be use to add product overview and documentation heading, description, sub heading and sub description.'
+behavior_plugins: {  }

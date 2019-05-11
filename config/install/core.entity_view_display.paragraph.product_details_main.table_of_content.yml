@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.table_of_content
+    - field.field.paragraph.product_details_main.field_description
+    - field.field.paragraph.product_details_main.field_product_details_sub_topics
+    - field.field.paragraph.product_details_main.field_title
+    - paragraphs.paragraphs_type.product_details_main
+  module:
+    - entity_reference_revisions
+id: paragraph.product_details_main.table_of_content
+targetEntityType: paragraph
+bundle: product_details_main
+mode: table_of_content
+content:
+  field_product_details_sub_topics:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: table_of_content
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  field_description: true

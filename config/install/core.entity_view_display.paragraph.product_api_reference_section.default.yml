@@ -1,0 +1,74 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.product_api_reference_section.field_api_link
+    - field.field.paragraph.product_api_reference_section.field_api_request_parameters
+    - field.field.paragraph.product_api_reference_section.field_api_response_parameters
+    - field.field.paragraph.product_api_reference_section.field_api_success_response
+    - field.field.paragraph.product_api_reference_section.field_api_type
+    - field.field.paragraph.product_api_reference_section.field_title
+    - paragraphs.paragraphs_type.product_api_reference_section
+  module:
+    - entity_reference_revisions
+    - link
+    - options
+id: paragraph.product_api_reference_section.default
+targetEntityType: paragraph
+bundle: product_api_reference_section
+mode: default
+content:
+  field_api_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_api_request_parameters:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_api_response_parameters:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_api_success_response:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_api_type:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

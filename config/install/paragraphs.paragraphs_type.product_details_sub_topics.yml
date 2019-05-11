@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: product_details_sub_topics
+label: 'Product Details (Sub Topics)'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
