@@ -18,7 +18,10 @@
     "drupal/admin_toolbar": "^1.0",
     "drupal/adminimal_admin_toolbar": "^1.9",
     "drupal/apigee_edge": "1.x-dev",
-    "drupal/blog": "2.x-dev"
+    "drupal/blog": "2.x-dev",
+    "drupal/nodeviewcount": "^1.0@alpha",
+    "drupal/paragraphs": "^1.8"
+    
   },
   "require-dev": {
     "drush/drush": "~9",
@@ -56,6 +59,11 @@
       "web/themes/contrib/{$name}": [
         "type:drupal-theme"
       ]
+    },
+    "patches": {
+       "drupal/blog": {
+         "Blog module unmet dependencies fix" : "https://www.drupal.org/files/issues/2019-04-30/blog-added-dependencies.patch"
+      }
     },
     "enable-patching": true
   }
