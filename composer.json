@@ -20,8 +20,8 @@
     "drupal/apigee_edge": "1.x-dev",
     "drupal/blog": "2.x-dev",
     "drupal/nodeviewcount": "^1.0@alpha",
-    "drupal/paragraphs": "^1.8"
-    
+    "drupal/paragraphs": "^1.8",
+    "drupal/twitter_block": "^3.0"
   },
   "require-dev": {
     "drush/drush": "~9",
