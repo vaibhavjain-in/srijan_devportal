@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: gallery_tile
+label: 'Gallery Tile'
+icon_uuid: null
+description: 'Paragraph field for the gallery block'
+behavior_plugins: {  }
