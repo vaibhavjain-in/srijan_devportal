@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.gallery_block
+    - field.storage.block_content.field_gallery_tile
+    - paragraphs.paragraphs_type.gallery_tile
+  module:
+    - entity_reference_revisions
+id: block_content.gallery_block.field_gallery_tile
+field_name: field_gallery_tile
+entity_type: block_content
+bundle: gallery_block
+label: 'Gallery Tile'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      gallery_tile: gallery_tile
+    target_bundles_drag_drop:
+      gallery_tile:
+        enabled: true
+        weight: 7
+      product_api_parameters:
+        weight: 8
+        enabled: false
+      product_api_reference_section:
+        weight: 9
+        enabled: false
+      product_api_success_response:
+        weight: 10
+        enabled: false
+      product_details_main:
+        weight: 11
+        enabled: false
+      product_details_sub_topics:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

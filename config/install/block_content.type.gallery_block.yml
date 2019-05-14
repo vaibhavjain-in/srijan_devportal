@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: gallery_block
+label: 'Gallery Block'
+revision: 0
+description: 'Block type for the gallery slideshow'
