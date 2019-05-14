@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: products_listing_cards_image_style
+label: 'Products Listing Cards Image Style (138 X 132)'
+effects:
+  64bace52-2092-436c-9706-c6547f0097ca:
+    uuid: 64bace52-2092-436c-9706-c6547f0097ca
+    id: image_scale
+    weight: 1
+    data:
+      width: 138
+      height: 132
+      upscale: false
