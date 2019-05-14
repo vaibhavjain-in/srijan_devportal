@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.table_of_content
+  module:
+    - node
+    - views
+  theme:
+    - srijan_devportal_theme
+id: srijan_devportal_theme_views_block__table_of_content_block
+theme: srijan_devportal_theme
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'views_block:table_of_content-table_of_content_block'
+settings:
+  id: 'views_block:table_of_content-table_of_content_block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      product: product
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
