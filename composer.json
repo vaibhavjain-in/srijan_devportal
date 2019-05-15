@@ -21,7 +21,8 @@
     "drupal/blog": "2.x-dev",
     "drupal/nodeviewcount": "^1.0@alpha",
     "drupal/paragraphs": "^1.8",
-    "drupal/twitter_block": "^3.0"
+    "drupal/twitter_block": "^3.0",
+    "drupal/views_slideshow": "^4.6"
   },
   "require-dev": {
     "drush/drush": "~9",
@@ -35,7 +36,8 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "@composer drupal-scaffold"
+      "@composer drupal-scaffold",
+      "./import.sh"
     ],
     "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
   },
