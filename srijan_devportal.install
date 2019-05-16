@@ -2,5 +2,17 @@
 
 /**
  * @file
- * Install, update and uninstall functions for the Srijan Devportal install profile.
+ * Install, update/uninstall functions for the Srijan Devportal install profile.
  */
+
+/**
+ * Implements hook_install_tasks().
+ */
+function srijan_devportal_install_tasks(&$install_state) {
+  return [
+    '\Drupal\srijan_devportal\Installer\Form\SrijanDevportalInstallForm' => [
+      'display_name' => t('Install srijan demo content'),
+      'type' => 'form',
+    ],
+  ];
+}
