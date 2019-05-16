@@ -22,7 +22,9 @@
     "drupal/nodeviewcount": "^1.0@alpha",
     "drupal/paragraphs": "^1.8",
     "drupal/twitter_block": "^3.0",
-    "drupal/views_slideshow": "^4.6"
+    "drupal/views_slideshow": "^4.6",
+    "drupal/default_content": "^1.0@alpha",
+    "drupal/file_entity": "^2.0@beta"
   },
   "require-dev": {
     "drush/drush": "~9",

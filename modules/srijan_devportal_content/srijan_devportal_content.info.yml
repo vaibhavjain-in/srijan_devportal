@@ -1,0 +1,9 @@
+name: Srijan Devportal Content
+description: "Provides demo content for srijan devportal."
+type: module
+core: 8.x
+distribution:
+  name: Srijan Devportal
+dependencies:
+  - default_content
+  - file_entity
