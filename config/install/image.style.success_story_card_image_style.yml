@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: success_story_card_image_style
+label: 'Success Story Card Image Style (586X440)'
+effects:
+  f83f772f-99d8-4a1a-a7cb-abcf042bae2a:
+    uuid: f83f772f-99d8-4a1a-a7cb-abcf042bae2a
+    id: image_scale
+    weight: 1
+    data:
+      width: 586
+      height: 440
+      upscale: false
