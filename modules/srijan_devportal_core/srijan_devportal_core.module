@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Url;
@@ -29,6 +30,34 @@ function srijan_devportal_core_entity_view(array &$build, EntityInterface $entit
     elseif ($view_mode === 'default') {
       // Set Id on parent div when view mode is default.
       $build['#attributes']['id'] = $machine_name . '-' . $entity->id();
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function srijan_devportal_core_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Add disclaimer message and readonly email field in the newsletter form.
+  if (preg_match('/(simplenews_subscriptions_block)/', $form_id)) {
+    $form['body'] = [
+      '#markup' => t('I agree that send me newsletters about API. I can withdraw my consent at any time by sending an e-mail. For further information please see our Data Privacy Notice.'),
+      '#weight' => 100
+    ];
+
+    $user = \Drupal::currentUser();
+    // Add readonly email field if user is logged in.
+    if ($user->isAuthenticated()) {
+      $form['mail'] = [
+        '#type' => 'textfield',
+        '#size' => 20,
+        '#maxlength' => 128,
+        '#required' => true,
+        '#default_value' => $user->getEmail(),
+        '#attributes' => [
+          'readonly' => 'readonly'
+        ]
+      ];
     }
   }
 }

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Newsletter
+id: newsletter
+description: 'Subscribe to newsletter to know about the latest updates, events and more.'
+format: plain
+priority: 0
+receipt: true
+from_name: 'Srijan Devportal'
+subject: '[[simplenews-newsletter:name]] [node:title]'
+from_address: devportal@srijan.net
+hyperlinks: true
+new_account: none
+opt_inout: single
+weight: 0

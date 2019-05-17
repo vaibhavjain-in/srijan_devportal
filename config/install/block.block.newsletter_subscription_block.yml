@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - simplenews
+    - system
+  theme:
+    - srijan_devportal_theme
+id: newsletter_subscription_block
+theme: srijan_devportal_theme
+region: content
+weight: -3
+provider: null
+plugin: simplenews_subscription_block
+settings:
+  id: simplenews_subscription_block
+  label: 'Simplenews subscription'
+  provider: simplenews
+  label_display: '0'
+  newsletters:
+    newsletter: newsletter
+  message: 'Subscribe to our newsletter to keep up with updates, events and more.'
+  unique_id: d3578150-0666-49fe-8f78-855c60d513cf
+visibility:
+  request_path:
+    id: request_path
+    pages: /user/1
+    negate: false
+    context_mapping: {  }
