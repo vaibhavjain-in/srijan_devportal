@@ -6,4 +6,3 @@ distribution:
   name: Srijan Devportal
 dependencies:
   - default_content
-  - file_entity
