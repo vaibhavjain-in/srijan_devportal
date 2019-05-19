@@ -29,7 +29,7 @@ settings:
     transparent: '0'
   border_color: ''
   language: ''
-  tweet_limit: ''
+  tweet_limit: '2'
   related: ''
   polite: polite
 visibility: {  }
