@@ -12,6 +12,7 @@ distribution:
 
 # Modules to install to support the profile.
 install:
+- admin_toolbar_tools
 - history
 - block_content
 - breakpoint
